@@ -1,22 +1,19 @@
-# LiDAR Point Cloud Classification Pipeline on AWS
+## Project Status
 
-## What This Does
-Takes raw FMCW LiDAR data → cleans it → classifies points → stores in database
+✅ **MVP Complete** - Core LiDAR pipeline operational
 
-## Architecture
-[To be added]
+- AWS Lambda function successfully processing S3 events
+- Architecture diagram finalized
+- Sample LiDAR data in S3 bucket
+- Code committed to GitHub
 
-## Tech Stack
-- PDAL (point cloud processing)
-- PostGIS (spatial database)
-- Open3D (feature extraction)
-- scikit-learn (ML model)
-- AWS S3 (data storage)
-- AWS Lambda (processing)
-- AWS RDS (database)
+## Quick Demo
 
-## Status
-🚀 In progress - MVP by June 1
+1. Upload LiDAR file to S3 bucket
+2. Lambda function auto-triggers
+3. Processes point cloud data
+4. Results logged to CloudWatch
 
-## Author
-Arpit Bhatt
+See `architecture/README.md` for full architecture details.
+
+See `PROGRESS.md` for development timeline.
