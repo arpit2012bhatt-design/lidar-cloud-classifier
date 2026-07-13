@@ -1,10 +1,19 @@
 # Architecture Diagram
 
-   [To be added: S3 → Lambda → RDS → Dashboard]
+![System Architecture](architecture_diagram.png)
 
-   ## Data Flow
-   1. User uploads LiDAR file to S3 bucket
-   2. S3 triggers Lambda function
-   3. Lambda processes with PDAL
-   4. Results stored in PostGIS (RDS)
-   5. Dashboard reads from database
+## Data Flow
+
+1. **S3 Bucket** → Stores raw FMCW LiDAR data
+2. **Lambda** → Processes with PDAL, extracts features
+3. **RDS/PostGIS** → Stores classified points in spatial database
+4. **Dashboard** → React frontend for visualization
+
+## Tech Stack
+- PDAL: Point cloud preprocessing
+- PostGIS: Spatial database
+- Open3D: Feature extraction
+- scikit-learn: ML classification
+- AWS Lambda: Serverless processing
+- AWS RDS: Managed PostgreSQL
+- React: Frontend UI
